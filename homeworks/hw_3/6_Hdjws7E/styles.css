@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 50px;
+    font-family: sans-serif;
+    background-color: rgba(255, 235, 205, 0.3);
+}
+
+.product-card {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 235, 205, 1);
+}
+
+.product-title {
+    text-transform: capitalize;
+}
+
+.product-image {
+    max-width: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}

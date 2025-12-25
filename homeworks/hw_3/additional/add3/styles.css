@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8e8fe;
+    color: #280142;
+}
+
+.wrap {
+    min-height: 100vh;
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.post-card {
+    padding: 20px 15px;
+    background-color: #fdefff;
+    box-shadow: 10px 10px 5px -1px rgba(0,0,0,0.32);
+}

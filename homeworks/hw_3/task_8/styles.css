@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("img/envelopes_bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    color: #0c232b;
+}
+
+.container {
+    max-width: 1280px;
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(1, 99, 131, 0.2);
+}
+
+h1 {
+    margin-bottom: 50px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #025873;
+    border-bottom: 1px solid #fcfff6;
+}
+
+.users-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+.user-block {
+    padding: 20px 15px;
+    background-color: #fcfff6;
+    border-radius: 8px;
+    box-shadow: 8px 10px 10px 0 rgba(51,91,106,0.4);
+}
+
+.user-block h2 {
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    color: #025873;
+    border-bottom: 1px solid #3a565c;
+}
+
+.user-block h3 {
+    margin-bottom: 10px;
+}
+
+.address-block p:not(:last-child) {
+    margin-bottom: 5px;
+}
