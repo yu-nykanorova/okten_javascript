@@ -82,8 +82,8 @@ let books = [
 const biggestBookBox = document.getElementById("biggest-book");
 const multigenreBooksBox = document.getElementById("multigenre-book");
 const longestTitleBookBox = document.getElementById("longest-title-book");
-const twoAuthorsBookBox = document.getElementById("two-authors-book");
-const singleAuthorBookBox = document.getElementById("single-author-book");
+const twoAuthorsBooksBox = document.getElementById("two-authors-book");
+const singleAuthorBooksBox = document.getElementById("single-author-book");
 
 let maxPagesAmount = 0;
 let maxPagesAmountBook = "";
@@ -102,10 +102,21 @@ for (let book of books) {
     if (book.title.length > longestTitleBook.length) {
         longestTitleBook = `"${book.title}"`;
     }
+    if (book.authors.length === 2) {
+        const twoAuthorsBook = document.createElement("p");
+        twoAuthorsBook.innerHTML = `- "${book.title}" (Authors: ${book.authors.join(" & ")}.`;
+        twoAuthorsBooksBox.append(twoAuthorsBook);
+    }
+    if (book.authors.length === 1) {
+        const singleAuthorBook = document.createElement("p");
+        singleAuthorBook.innerHTML = `- "${book.title}" (Author: ${book.authors[0]}.`;
+        singleAuthorBooksBox.append(singleAuthorBook);
+    }
 }
 
 // найбільша книжка
-const biggestBook = `The book "${maxPagesAmountBook}" has ${maxPagesAmount} pages`;
+const biggestBook = document.createElement("p");
+biggestBook.innerHTML = `The book "${maxPagesAmountBook}" has ${maxPagesAmount} pages`;
 biggestBookBox.append(biggestBook);
 
 // мультижанрові книжки
