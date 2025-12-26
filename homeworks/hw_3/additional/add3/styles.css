@@ -13,6 +13,7 @@ body {
 
 .wrap {
     min-height: 100vh;
+    max-width: 1200px;
     width: 80%;
     margin: 50px auto;
     display: grid;
@@ -22,6 +23,6 @@ body {
 
 .post-card {
     padding: 20px 15px;
-    background-color: #fdefff;
+    background-color: #fef4ff;
     box-shadow: 10px 10px 5px -1px rgba(0,0,0,0.32);
 }
