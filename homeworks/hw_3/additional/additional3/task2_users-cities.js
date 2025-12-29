@@ -17,3 +17,21 @@ let citiesWithId = [
 ];
 
 let usersWithCities = [];
+
+for (let user of usersWithId) {
+    for (let address of citiesWithId) {
+        if (address.user_id === user.id) {
+            usersWithCities[usersWithCities.length] = {
+                id: user.id,
+                name: user.name,
+                age: user.age,
+                status: user.status,
+                address: address,
+            }
+            break;
+        }
+    }
+}
+
+console.log(usersWithCities);
+console.log(usersWithId);
