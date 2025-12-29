@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #280142;
+    color: #f8e8fe;
+    padding: 5% 20%;
+}
+ul {
+    margin-bottom: 50px;
+}
+
+li {
+    list-style: circle;
+    font-size: 20px;
+}
+
+.user {
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 3px 3px 10px 1px #f8e8fe;
+}
