@@ -1,7 +1,7 @@
 // #pghbnSB
 // - створити функцію яка повертає найменьше число з масиву
 
-function min (array) {
+let min = (array) => {
     let min = array[0];
     for (let i = 1; i < array.length; i++) {
         if (array[i] < min) {
@@ -16,7 +16,7 @@ console.log(minResult);
 // #EKRNVPM
 // - створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 
-function sum (array) {
+let sum = (array) => {
     let sum = 0;
     for (let item of array) {
         sum += item;
@@ -30,7 +30,7 @@ console.log(sumResult);
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 
-function swap (array, index1, index2) {
+let swap = (array, index1, index2) => {
     if (index1 < array.length && index2 < array.length) {
         let temp = array[index1];
         array[index1] = array[index2];
@@ -39,5 +39,5 @@ function swap (array, index1, index2) {
     } else return "This array hasn't such index";
 }
 
-let swapResult = swap([3, 76, 14, 198], 1, 3);
+let swapResult = swap([3, 76, 14, 198, 11], 1, 3);
 console.log(swapResult);

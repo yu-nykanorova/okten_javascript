@@ -1,29 +1,22 @@
 // #I2XsG6f
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-function rectArea (sideA, sideB) {
-    return sideA * sideB;
-}
+let rectArea = (sideA, sideB) => sideA * sideB;
 
-let rectangle = `Rectangle area is ${rectArea(5, 7)}`;
-console.log(rectangle);
+console.log(`Rectangle area is ${rectArea(4, 7)}`);
 
 // #ETGAxbEn8l
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
 const PI = Math.PI.toFixed(2);
 
-function circleArea (radius) {
-    return PI * Math.pow(radius, 2);
-}
-let circle = `Circle area is ${circleArea(4)}`;
-console.log(circle);
+let circleArea = (radius) => PI * Math.pow(radius, 2);
+
+console.log(`Circle area is ${circleArea(5)}`);
 
 // #Mbiz5K4yFe7
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
-function cylinderArea (height, radius) {
-    return 2 * PI * radius * (radius + height);
-}
-let cylinder = `Cylinder area is ${cylinderArea(4, 4)}`;
-console.log(cylinder);
+let cylinderArea = (height, radius) => 2 * PI * radius * (radius + height);
+
+console.log(`Cylinder area is ${cylinderArea(4, 5)}`);
