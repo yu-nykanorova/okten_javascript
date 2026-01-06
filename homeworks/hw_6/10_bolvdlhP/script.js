@@ -15,7 +15,7 @@
 //     color:”, // ‘red’,’black’
 // }
 
-const cardsSuit = ["spade", "clubs", "heart", "diamond",];
+const cardsSuit = ["spade", "clubs", "heart", "diamond"];
 const cardsValue = ["6", "7", "8", "9", "10", "jack", "queen", "king", "ace"];
 const cards = [];
 
@@ -31,3 +31,24 @@ for (let suit of cardsSuit) {
 }
 
 console.log(cards);
+
+//  – знайти піковий туз
+const spadeAce = cards.find(card => card.cardSuit === "spade" && card.value === "ace");
+console.log(spadeAce);
+
+//  – знайти всі шістки
+const sixes = cards.filter(card => card.value === "6");
+console.log(sixes);
+
+//  – знайти всі червоні карти
+const redCards = cards.filter(card => card.color === "red");
+console.log(redCards);
+
+//  – знайти всі буби
+const diamondCards = cards.filter(card => card.cardSuit === "diamond");
+console.log(diamondCards);
+
+//  – знайти всі трефи від 9 та більше
+const highValues = cardsValue.slice(3);
+const clubsHighValues = cards.filter(card => card.cardSuit === "clubs" && highValues.includes(card.value));
+console.log(clubsHighValues);
