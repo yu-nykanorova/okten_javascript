@@ -17,16 +17,22 @@ function Car(model, producer, year, maxSpeed, engineDispl) {
     };
     this.info = function () {
         for (let key in this) {
-            if (typeof this[key] !== "function") {
+            if (typeof this[key] === "function") {
+                console.log(`function to ${key}`);
+            } else {
                 console.log(`${key} - ${this[key]}`);
             }
         }
     };
-    this.increaseMaxSpeed = function (newSpeed) {
-        return this.maxSpeed += newSpeed;
+    this.increaseMaxSpeed = function (addToSpeed) {
+        if (addToSpeed > 0) {
+            return this.maxSpeed += addToSpeed;
+        }
     };
     this.changeYear = function (newValue) {
-        return this.year = newValue;
+        if (newValue >= 1885) {
+            return this.year = newValue;
+        }
     };
     this.addDriver = function (driver) {
         this.driver = driver;
@@ -47,5 +53,5 @@ console.log(`Changed year of ${audi.model} production is ${audi.changeYear(2010)
 const anna = new Driver("Anna", 123456);
 audi.addDriver(anna);
 console.log(`Driver of the ${audi.model} is ${audi.driver.name} (license number - ${audi.driver.driverLicense})`);
-
+console.log(audi);
 
