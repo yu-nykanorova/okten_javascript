@@ -4,14 +4,12 @@
 //     Подумати і реалізувати логіку, в якій кінцевий об’єкт буде мати функції, які в нього були до цього моменту.
 
 function copyObject (object) {
-    if (object === null || object === undefined || Number.isNaN(object)) {
+    if (object === null || object === undefined || Number.isNaN(object) || typeof object !== "object") {
         return null;
     }
-    if (typeof object !== "object") {
-        return null;
-    }
+
     const copy = JSON.parse(JSON.stringify(object));
-    for (let key in object) {
+    for (const key in object) {
         if (typeof object[key] === 'function') {
             copy[key] = object[key].bind(copy);
         }
@@ -38,5 +36,5 @@ newObj.eatMe = function() {
 console.log(newObj);
 newObj.eatMe();
 
-const wrongObj = copyObject({});
+const wrongObj = copyObject("string");
 console.log(wrongObj);
