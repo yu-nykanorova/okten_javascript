@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e6e6;
+}
+
+main {
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(58, 86, 92, 0.6);
+}
+
+#courses-list {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.item {
+    padding: 15px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    color: #3A565C;
+}
+
+.heading {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.description {
+    font-size: 18px;
+}

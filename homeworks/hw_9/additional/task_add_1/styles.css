@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e6e6;
+}
+
+main {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 50px;
+    background: #585567;
+}
+
+#courses-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
