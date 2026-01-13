@@ -41,3 +41,29 @@ let coursesArray = [
 ];
 
 const coursesList = document.getElementById("courses-list");
+
+for (const course of coursesArray) {
+    const courseItem = document.createElement("div");
+    courseItem.classList.add("course-item");
+    const courseTitle = document.createElement("h2");
+    const courseDuration = document.createElement("div");
+    courseDuration.classList.add("course-duration");
+    const monthDuration = document.createElement("p");
+    const hourDuration = document.createElement("p");
+
+    courseTitle.innerText = course.title;
+    monthDuration.innerText = `${course.monthDuration} months`;
+    hourDuration.innerText = `${course.hourDuration} hours`;
+    courseDuration.append(monthDuration, hourDuration);
+
+    const courseModules = document.createElement("ul");
+
+    for (const module of course.modules) {
+        const moduleItem = document.createElement("li");
+        moduleItem.innerText = module;
+        courseModules.append(moduleItem);
+    }
+
+    courseItem.append(courseTitle, courseDuration, courseModules);
+    coursesList.append(courseItem);
+}
