@@ -7,9 +7,7 @@
 
 const content = document.createElement("div");
 content.classList.add("wrap", "collapse", "alpha", "beta");
-content.style.backgroundColor = "rgba(255, 255, 255, 0.5";
-content.style.color = "midnightblue";
-content.style.fontSize = "20px";
+
 content.innerText= "Carl Sagan: 'We find that we live on an insignificant planet of a humdrum star lost in a galaxy tucked away in some forgotten corner of a universe in which there are far more galaxies than people.'"
 document.body.appendChild(content);
 const cloneContent = content.cloneNode(true);

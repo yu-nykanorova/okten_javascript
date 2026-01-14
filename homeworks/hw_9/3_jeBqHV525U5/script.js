@@ -18,10 +18,6 @@ const coursesList = document.getElementById("courses-list");
 for (let course of coursesAndDurationArray) {
     const courseItem = document.createElement("div");
     courseItem.classList.add("course-item");
-    const courseTitle = document.createElement("h2");
-    const courseDuration = document.createElement("p");
-    courseTitle.innerText = course.title;
-    courseDuration.innerText = `course duration: ${course.monthDuration} month(s)`;
-    courseItem.append(courseTitle, courseDuration);
+    courseItem.innerText = `${course.title}, course duration: ${course.monthDuration} month(s)`;
     coursesList.append(courseItem);
 }

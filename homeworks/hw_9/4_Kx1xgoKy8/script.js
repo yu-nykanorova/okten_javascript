@@ -18,7 +18,7 @@ const coursesList = document.getElementById("courses-list");
 for (let course of coursesAndDurationArray) {
     const courseItem = document.createElement("div");
     courseItem.classList.add("item");
-    const courseTitle = document.createElement("h1");
+    const courseTitle = document.createElement("h2");
     courseTitle.classList.add("heading");
     const courseDescription = document.createElement("p");
     courseDescription.classList.add("description");
