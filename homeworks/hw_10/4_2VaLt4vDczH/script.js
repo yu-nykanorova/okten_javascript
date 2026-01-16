@@ -5,7 +5,7 @@
 const counterBlock = document.getElementById("counter-block");
 
 window.addEventListener("load", () => {
-    let counterAmount = +localStorage.getItem("counter") || 0;
+    let counterAmount = +localStorage.getItem("counter");
 
     counterAmount += 1;
 
