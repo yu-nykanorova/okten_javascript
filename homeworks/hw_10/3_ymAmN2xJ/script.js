@@ -18,6 +18,7 @@ personalDataForm.addEventListener("submit", (event) => {
     age.textContent = `Age is: ${inputAge.value}`;
     responseBox.style.display = "flex";
     responseBox.replaceChildren(name, surname, age);
+    personalDataForm.reset();
 });
 
 
