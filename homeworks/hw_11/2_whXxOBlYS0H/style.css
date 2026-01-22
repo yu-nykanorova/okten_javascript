@@ -54,7 +54,7 @@ h1  {
 .recipe-item {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
     border-radius: 8px;
     background-color: rgba(255, 255, 250, 0.5);
     box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.65);
@@ -78,47 +78,109 @@ h1  {
 .rating-data,
 .serving-data,
 .time-data {
-    width: 100px;
     position: absolute;
     padding: 5px 10px;
+    border-radius: 4px;
 }
 
 .meal-data {
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 250, 0.7);
     color: #4e020e;
-    border-radius: 4px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
+    background-color: rgba(255, 255, 250, 0.3);
+    text-align: left;
 }
 
 .rating-data {
     bottom: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.rating-data p {
+    color: #f8e8fe;
+    font-size: 14px;
+}
+
+.rating-data p:first-child {
+    color: gold;
 }
 
 .serving-data {
     top: 0;
     right: 0;
+    background-color: rgba(255, 255, 250, 0.7);
+    text-align: left;
+}
+
+.serving-data p {
+    font-size: 12px;
 }
 
 .time-data {
-    bottom: -60px;
+    bottom: -40px;
     right: 0;
+}
+
+.time-data p {
+    font-size: 12px;
 }
 
 .recipe-info {
     padding: 5px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recipe-info > p:first-of-type {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .recipe-info h2 {
     color: #4e020e;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 22px;
 }
 
-.recipe-ingredients {}
+.recipe-ingredients {
+    text-align: left;
+    list-style-type: circle;
+    list-style-position: inside;
+    font-weight: 600;
+}
 
-.recipe-instructions {}
+.recipe-ingredients li {
+    margin-top: 5px;
+    font-size: 14px;
+}
 
-.recipe-tags {}
+.recipe-instructions {
+    font-weight: 600;
+}
+
+.recipe-instructions p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.recipe-info > p:last-of-type {
+    font-size: 14px;
+    text-align: left;
+    font-style: italic;
+}
+
+.recipe-tags {
+    display: flex;
+}
+
+.recipe-tags a {
+    margin-left: 8px;
+    color: blue;
+}

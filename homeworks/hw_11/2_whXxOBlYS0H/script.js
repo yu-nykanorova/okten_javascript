@@ -2,7 +2,7 @@
 //
 // – взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути списком під час відображення.
 
-const receiptsList = document.getElementById("recipesList");
+const recipesList = document.getElementById("recipesList");
 
 fetch("https://dummyjson.com/recipes")
     .then(response => response.json())
@@ -29,34 +29,35 @@ function showRecipes(data){
         const recipeRatingData = document.createElement("div");
         recipeRatingData.classList.add("rating-data");
         const rating = document.createElement("p");
-        rating.textContent = item.rating;
+        rating.textContent = `★ ${item.rating}`;
         const reviews = document.createElement("p");
-        reviews.textContent = item.reviewCount;
+        reviews.textContent = `${item.reviewCount} reviews`;
         recipeRatingData.append(rating, reviews);
         const recipeServingData = document.createElement("div");
         recipeServingData.classList.add("serving-data");
         const servings = document.createElement("p");
-        servings.textContent = item.servings;
+        servings.textContent = `Servings: ${item.servings}`;
         const calories = document.createElement("p");
-        calories.textContent = item.caloriesPerServing;
+        calories.textContent = `Calories: ${item.caloriesPerServing}`;
         recipeServingData.append(servings, calories);
         const recipeTimeData = document.createElement("div");
         recipeTimeData.classList.add("time-data");
         const prepTime = document.createElement("p");
-        prepTime.textContent = item.prepTimeMinutes;
+        prepTime.textContent = `Preparing time: ${item.prepTimeMinutes}`;
         const cookTime = document.createElement("p");
-        cookTime.textContent = item.cookTimeMinutes;
+        cookTime.textContent = `Cooking time: ${item.cookTimeMinutes}`;
         recipeTimeData.append(prepTime, cookTime);
         recipeImageBox.append(image, recipeMealData, recipeRatingData, recipeServingData, recipeTimeData);
 
         const recipeInfoBox = document.createElement("div");
         recipeInfoBox.classList.add("recipe-info");
         const recipeId = document.createElement("p");
-        recipeId.textContent = item.id;
+        recipeId.textContent = `Recipe ID: ${item.id}`;
         const recipeName = document.createElement("h2");
         recipeName.textContent = item.name;
         const recipeIngredients = document.createElement("ul");
         recipeIngredients.classList.add("recipe-ingredients");
+        recipeIngredients.textContent = "Ingredients:";
 
         for (const ingredient of item.ingredients) {
             const ingredientName = document.createElement("li");
@@ -66,6 +67,7 @@ function showRecipes(data){
 
         const recipeInstructions = document.createElement("div");
         recipeInstructions.classList.add("recipe-instructions");
+        recipeInstructions.textContent = "Instructions:";
 
         for (const instruction of item.instructions) {
             const instructionItem = document.createElement("p");
@@ -74,21 +76,22 @@ function showRecipes(data){
         }
 
         const recipeUserId = document.createElement("p");
-        recipeUserId.textContent = item.userId;
+        recipeUserId.textContent = `User ID: ${item.userId}`;
         const recipeTags = document.createElement("div");
         recipeTags.classList.add("recipe-tags");
 
         for (const tag of item.tags) {
-            const tagName = document.createElement("p");
-            tagName.textContent = tag;
+            const tagName = document.createElement("a");
+            tagName.href = "#";
+            tagName.textContent = `#${tag}`;
             recipeTags.append(tagName);
         }
 
-        recipeInfoBox.append(recipeId, recipeName, recipeIngredients, recipeInstructions, recipeUserId, recipeTags);
+        recipeInfoBox.append(recipeName, recipeId, recipeIngredients, recipeInstructions, recipeUserId, recipeTags);
 
         recipeItem.append(recipeImageBox, recipeInfoBox);
 
-        receiptsList.append(recipeItem);
+        recipesList.append(recipeItem);
     }
 }
 
