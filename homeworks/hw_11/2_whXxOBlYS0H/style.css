@@ -28,7 +28,7 @@ body {
 }
 
 #container {
-    max-width: 1640px;
+    max-width: 1440px;
     min-height: 100vh;
     margin: 0 auto;
     padding: 100px 50px;
@@ -126,7 +126,8 @@ h1  {
 }
 
 .time-data p {
-    font-size: 12px;
+    font-size: 13px;
+    text-align: right;
 }
 
 .recipe-info {

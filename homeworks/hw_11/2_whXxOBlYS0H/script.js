@@ -4,7 +4,9 @@
 
 const recipesList = document.getElementById("recipesList");
 
-fetch("https://dummyjson.com/recipes")
+const url = new URL("https://dummyjson.com/recipes");
+
+fetch(url)
     .then(response => response.json())
     .then(({recipes}) => showRecipes(recipes));
 
@@ -43,9 +45,9 @@ function showRecipes(data){
         const recipeTimeData = document.createElement("div");
         recipeTimeData.classList.add("time-data");
         const prepTime = document.createElement("p");
-        prepTime.textContent = `Preparing time: ${item.prepTimeMinutes}`;
+        prepTime.textContent = `Preparing time: ${item.prepTimeMinutes} min`;
         const cookTime = document.createElement("p");
-        cookTime.textContent = `Cooking time: ${item.cookTimeMinutes}`;
+        cookTime.textContent = `Cooking time: ${item.cookTimeMinutes} min`;
         recipeTimeData.append(prepTime, cookTime);
         recipeImageBox.append(image, recipeMealData, recipeRatingData, recipeServingData, recipeTimeData);
 

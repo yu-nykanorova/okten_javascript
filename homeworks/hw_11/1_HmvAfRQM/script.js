@@ -20,7 +20,7 @@ function showCarts(data){
         const cartUserId = document.createElement("p");
         cartUserId.classList.add("cart-item__userId");
         cartUserId.textContent = `User: ${userId}`;
-        const cartProductsList = document.createElement("div");
+        const cartProductsList = document.createElement("ul");
         cartProductsList.classList.add("cart-item__products");
         const cartTotalBalance = document.createElement("p");
         cartTotalBalance.classList.add("cart-item__total-balance");
@@ -34,7 +34,7 @@ function showCarts(data){
         cartTotalQuantity.textContent = `Total quantity: ${totalQuantity}`;
 
         for (const product of products){
-            const productItem = document.createElement("div");
+            const productItem = document.createElement("li");
             productItem.classList.add("product-item");
             const productImage = document.createElement("img");
             productImage.src = product.thumbnail;
